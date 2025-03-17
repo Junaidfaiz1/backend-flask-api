@@ -1,5 +1,25 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
+  "version": 2,
+  "builds": [
+      {
+          "src": "vercel_handler.py",
+          "use": "@vercel/python"
+      }
+  ],
+  "routes": [
+      {
+          "src": "/(.*)",
+          "dest": "vercel_handler.py"
+      }
+  ],
+  "crons": [
+      {
+          "path": "/api/cron/scrape-jobs",
+          "schedule": "*/45 * * * *"
+      },
+      {
+          "path": "/api/cron/scrape-categories",
+          "schedule": "0 */12 * * *"
+      }
   ]
 }

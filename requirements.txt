@@ -1,1 +1,12 @@
-Flask==3.0.3
+APScheduler==3.11.0
+beautifulsoup4==4.13.3
+Flask==3.1.0
+flask-cors==5.0.1
+Flask-SQLAlchemy==3.1.1
+gunicorn==23.0.0
+lxml==5.3.1
+psycopg2-binary==2.9.10  
+python-dotenv==1.0.1
+requests==2.32.3
+SQLAlchemy==2.0.38      # SQL ORM
+supabase==2.3.4         # Supabase client
